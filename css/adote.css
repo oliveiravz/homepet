@@ -1,0 +1,40 @@
+.div-container{
+    display: inline-block;
+    background-color: white;
+    width: 30%;
+}
+
+.dog-picture img{
+    width: 500px;
+    background-size: cover;
+}
+
+.div-container-x{
+    float: right;
+    background-color: white;
+    width: 58%;
+    overflow-y: scroll;
+}
+
+.div-container-x p {
+    margin-top: 15px;
+    color: #AAAAAA;
+    width: 100%;
+    min-height: 290px;
+}
+
+.btn-adote{
+    background-color: #FE6D25;
+    color: #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn-adote:hover{
+    background-color: #fff;
+    color: #FE6D25;
+    border: 1px solid#FE6D25;
+}

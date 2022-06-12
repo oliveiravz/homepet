@@ -1,0 +1,41 @@
+.card{
+    display: inline-block;
+    min-width: 25%;
+    min-height: 450px;
+    background-color: #fff;
+    max-width: 150px;
+    margin: 25px 25px 0 0;
+    border-radius: 15px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card p {
+    margin: 10px;
+    color: #B7B7B7;
+
+}
+.card-title{
+    margin-left: 10px;
+    color: #FE6D25;
+}
+
+.card-img img{
+    height: 300px;
+    background-position: center;
+    margin-left: 1px;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.card-img img:hover {
+    opacity: 70%;
+}
+
+.card-desc {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    color: #777777;
+}
