@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS `homepet`.`usuario` (
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_usuario_login1_idx` (`email` ASC) VISIBLE,
   CONSTRAINT `fk_usuario_login1`
     FOREIGN KEY (`email`)
     REFERENCES `homepet`.`login` (`email`)
@@ -37,7 +36,6 @@ CREATE TABLE IF NOT EXISTS `homepet`.`telefone` (
   `whatsapp` VARCHAR(45) NULL,
   `usuario_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_telefone_usuario_idx` (`usuario_id` ASC) VISIBLE,
   CONSTRAINT `fk_telefone_usuario`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `homepet`.`usuario` (`id`)
@@ -70,8 +68,6 @@ CREATE TABLE IF NOT EXISTS `homepet`.`animal` (
   `imagem` BLOB NULL,
   `created` DATE NULL,
   PRIMARY KEY (`id_animal`),
-  INDEX `fk_animal_usuario1_idx` (`usuario_id` ASC) VISIBLE,
-  INDEX `fk_animal_raca1_idx` (`raca_id` ASC) VISIBLE,
   CONSTRAINT `fk_animal_usuario1`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `homepet`.`usuario` (`id`)
@@ -92,7 +88,6 @@ CREATE TABLE IF NOT EXISTS `homepet`.`endereco` (
   `usuario_id` INT NOT NULL AUTO_INCREMENT,
   `estado` VARCHAR(45) NOT NULL,
   `cidade` VARCHAR(45) NOT NULL,
-  INDEX `fk_endereco_usuario1_idx` (`usuario_id` ASC) VISIBLE,
   PRIMARY KEY (`usuario_id`),
   CONSTRAINT `fk_endereco_usuario1`
     FOREIGN KEY (`usuario_id`)
@@ -100,3 +95,6 @@ CREATE TABLE IF NOT EXISTS `homepet`.`endereco` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+INSERT INTO raca(raca) VALUES('Boxer'), ('Sem raça definida'), ('Pitbull'),('Rotweiller');
